@@ -34,6 +34,7 @@ class AppList extends StatelessWidget {
               children: [
                 for (var a in snapshot.data ?? <Application>[])
                   ListTile(
+                    title: Text(a.appName),
                     trailing: Image.memory((a as ApplicationWithIcon).icon),
                   )
               ],
